@@ -1,12 +1,15 @@
 import { Paper } from "@material-ui/core";
 import React from "react";
 import "./Paper.css";
+
 const Schedule = {
   Mon: "과학.수학.영어.기가.정보.미술",
   Tue: "수학.독서.체육.영어.국어.스포.창체",
   Wed: "음악.수학.역사.국어.기가.과학.체육",
   Thu: "기가.정보.과학.예음.역사.수학",
   Fri: "체육.과학.기탐.영어.역사.국어",
+  Sat:"오늘은.쉬는.날",
+  Sun:"오늘은.쉬는.날",
 };
 
 const zoomIDGet = (subject) => {
@@ -43,10 +46,11 @@ const zoomIDGet = (subject) => {
 
 const getDayOfWeek = () => {
   const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const dayOfWeek = week[new Date("2021-04-01").getDay()];
+  const dayOfWeek = week[new Date().getDay()];
   return dayOfWeek;
 };
 
+console.log(getDayOfWeek())
 const TimeTable = () => {
   const dateToday = getDayOfWeek();
   let todaysSchedule;
