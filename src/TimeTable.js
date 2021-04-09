@@ -39,6 +39,8 @@ const zoomIDGet = (subject) => {
     return "6871964364";
   } else if (subject === "스포") {
     return "4507491039";
+  } else if(subject === "기탐") {
+    return "2558169121"
   } else {
     return "error404";
   }
