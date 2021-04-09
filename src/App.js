@@ -67,9 +67,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CustomizedTabs() {
+export default function App() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -91,8 +91,8 @@ export default function CustomizedTabs() {
           <Typography className={classes.padding} />
         </div>
       <div className={classes.bottomDiv}>
-        <div style={{marginTop:value === 0 ? '25vh' : value === 1 ? -30 : value === 2 ? '10vh' : <h1>404 error</h1>}}>
-          {value === 0 ? TimeTable() : value === 1 ? Notice() : value === 2 ? TimeChart() : <h1>404 error</h1>}
+        <div style={{marginTop:value === 0 ? '25vh' : value === 1 ? -30 : value === 2 ? '15vh' : <h1>404 error</h1>}}>
+          {value === 0 ? TimeTable() : value === 1 ? Notice() : TimeChart()}
         </div>
       </div>
       </div>
