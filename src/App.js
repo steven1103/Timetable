@@ -57,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
     width: "90%",
     display: "table",
     marginLeft: "5%",
-    marginTop:'25vh'
   },
   paper: {
     height: 240,
@@ -70,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CustomizedTabs() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -92,7 +91,9 @@ export default function CustomizedTabs() {
           <Typography className={classes.padding} />
         </div>
       <div className={classes.bottomDiv}>
+        <div style={{marginTop:value === 0 ? '25vh' : value === 1 ? -30 : value === 2 ? '10vh' : <h1>404 error</h1>}}>
           {value === 0 ? TimeTable() : value === 1 ? Notice() : value === 2 ? TimeChart() : <h1>404 error</h1>}
+        </div>
       </div>
       </div>
     </>

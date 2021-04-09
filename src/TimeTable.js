@@ -52,7 +52,6 @@ const getDayOfWeek = () => {
   return dayOfWeek;
 };
 
-console.log(getDayOfWeek())
 const TimeTable = () => {
   const dateToday = getDayOfWeek();
   let todaysSchedule;
@@ -80,6 +79,7 @@ const TimeTable = () => {
           verticalAlign: "middle",
           textAlign: "center",
           alignSelf: "center",
+          
         }}
         key={i}
         className="Paper"
@@ -96,6 +96,8 @@ const TimeTable = () => {
             color: "blue",
             textDecoration:"none"
           }}
+          target="_blank"
+          rel="noreferrer"
         >
           링크
         </a>
@@ -105,7 +107,6 @@ const TimeTable = () => {
 
   return (
     <div>
-      <br />
       <div
         style={{
           display: "table",
