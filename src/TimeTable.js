@@ -8,8 +8,8 @@ const Schedule = {
   Wed: "음악.수학.역사.국어.기가.과학.체육",
   Thu: "기가.정보.과학.예음.역사.수학",
   Fri: "체육.체육.체육.영어.역사.국어",
-  Sat:"체육.체육.체육",
-  Sun:"체육.체육.체육",
+  Sat: "체육.체육.체육",
+  Sun: "체육.체육.체육",
 };
 
 const zoomIDGet = (subject) => {
@@ -39,8 +39,8 @@ const zoomIDGet = (subject) => {
     return "6871964364";
   } else if (subject === "스포") {
     return "4507491039";
-  } else if(subject === "기탐") {
-    return "2558169121"
+  } else if (subject === "기탐") {
+    return "2558169121";
   } else {
     return "error404";
   }
@@ -66,6 +66,10 @@ const TimeTable = () => {
     todaysSchedule = Schedule.Thu;
   } else if (dateToday === "Fri") {
     todaysSchedule = Schedule.Fri;
+  } else if (dateToday === "Sat") {
+    todaysSchedule = Schedule.Sat;
+  } else if (dateToday === "Sun") {
+    todaysSchedule = Schedule.Sun;
   }
 
   const splitedSchedule = todaysSchedule.split(".");
@@ -79,7 +83,6 @@ const TimeTable = () => {
           verticalAlign: "middle",
           textAlign: "center",
           alignSelf: "center",
-          
         }}
         key={i}
         className="Paper"
@@ -90,11 +93,13 @@ const TimeTable = () => {
           {splitedSchedule[i]}
         </h1>
         <a
-          href={"https://us04web.zoom.us/j/".concat(zoomIDGet(splitedSchedule[i]))}
+          href={"https://us04web.zoom.us/j/".concat(
+            zoomIDGet(splitedSchedule[i])
+          )}
           style={{
             alignSelf: "center",
             color: "blue",
-            textDecoration:"none"
+            textDecoration: "none",
           }}
           target="_blank"
           rel="noreferrer"
