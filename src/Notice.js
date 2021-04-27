@@ -13,7 +13,7 @@ const Notice = () => {
             minHeight: 295,
             textAlign: "center",
           }}
-          onClick={() => window.open("https://us04web.zoom.us/j/5533636313")}
+          onClick={() => window.open("https://us04web.zoom.us/j/3680263847")}
         >
           <div style={{ marginTop: 65 }}>
             <h3>#줌 들어가기</h3>
@@ -43,12 +43,12 @@ const Notice = () => {
             minHeight: 295,
             textAlign: "center",
           }}
-          onClick={() => window.open("https://timetreeapp.com/calendars/f8N4kHogxvbT")}
+          
         >
           <div style={{ marginTop: 65 }}>
             <h3>#바로가기</h3>
             <h1 style={{ color: "green" }}>TIMETREE</h1>
-            <h3>준비물은 꼼꼼히!</h3>
+            <h3>3반 지원 X</h3>
           </div>
         </Paper>
         <Paper
